@@ -12,10 +12,8 @@
 </head>
 <body>
 <div id="wrapper">
-        <audio id="birthdayMusic" autoplay loop;">
+        <audio autoplay loop>
             <source src="./birthday.mp3" type="audio/mpeg">
-            <source src="./birthday.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
         </audio>
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -145,20 +143,6 @@
         </div>
     </div>
 <script>
-    // Audio playback trigger
-    document.addEventListener('DOMContentLoaded', function() {
-        var audio = document.getElementById('birthdayMusic');
-        audio.play().catch(function(error) {
-            console.log("Autoplay prevented: ", error);
-            // Attempt to play on user interaction
-            document.addEventListener('click', function playOnInteraction() {
-                audio.play().then(() => {
-                    document.removeEventListener('click', playOnInteraction);
-                }).catch(err => console.log("Playback failed: ", err));
-            }, { once: true });
-        });
-    });
-
     let datetxt = "09 July";
     let datatxtletter = "My Teddy Bear!❤️✨, You're a very special girl 🥰💝 and someone who's always on my mind 😌, but know that I'm thinking of you just that little bit more today😁!. I feel so lucky to have you as my Spl One 💓.Hope your B'day is as special as you are 🤗. I always hope we will celebrate many more B'days like this together💖. In good times and bad, I'll always be by your side 🩷✨. Happy birthday Dii💕";
     let titleLetter = "To you";
